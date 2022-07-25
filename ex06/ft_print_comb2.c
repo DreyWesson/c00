@@ -1,25 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 16:43:47 by doduwole          #+#    #+#             */
-/*   Updated: 2022/07/25 09:00:57 by doduwole         ###   ########.fr       */
+/*   Created: 2022/07/24 14:02:17 by doduwole          #+#    #+#             */
+/*   Updated: 2022/07/25 09:28:02 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_print_comb2(void)
 {
 	int	i;
+	int	j;
 
-	i = 48;
-	while (i <= 57)
+	i = 0;
+	while (i <= 98)
 	{
-		write(1, &i, 1);
+		j = i + 1;
+		while (j <= 99)
+		{
+			ft_putchar((i / 10) + '0');
+			ft_putchar((i % 10) + '0');
+			ft_putchar(' ');
+			ft_putchar((j / 10) + '0');
+			ft_putchar((j % 10) + '0');
+			if ((i != 98))
+			{
+				ft_putchar(',');
+				ft_putchar(' ');
+			}
+			j++;
+		}
+		ft_putchar(',');
 		i++;
 	}
 }

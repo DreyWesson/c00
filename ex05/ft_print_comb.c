@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 09:06:24 by doduwole          #+#    #+#             */
-/*   Updated: 2022/07/24 10:31:45 by doduwole         ###   ########.fr       */
+/*   Created: 2022/07/24 15:57:03 by doduwole          #+#    #+#             */
+/*   Updated: 2022/07/25 08:33:27 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_print_char(int a, int b, int c)
+int	ft_print_chars(int a, int b, int c)
 {
 	int	condition;
 
@@ -26,6 +26,7 @@ int	ft_print_char(int a, int b, int c)
 		else
 		{
 			write(1, ", ", 1);
+			write(1, " ", 1);
 			condition = 0;
 		}
 	}
@@ -48,9 +49,9 @@ void	ft_print_comb(void)
 			k = j + 1;
 			while (k <= '9')
 			{
-				condition = ft_print_char(i, j, k);
+				condition = ft_print_chars(i, j, k);
 				if (condition == 1)
-					break;
+					break ;
 				k++;
 			}
 			j++;
