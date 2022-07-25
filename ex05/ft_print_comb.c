@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 15:57:03 by doduwole          #+#    #+#             */
-/*   Updated: 2022/07/25 08:33:27 by doduwole         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:19:33 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ int	ft_print_chars(int a, int b, int c)
 			write(1, " ", 1);
 			condition = 0;
 		}
+	}
+	else
+	{
+		condition = 0;
 	}
 	return (condition);
 }
