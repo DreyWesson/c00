@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 14:02:17 by doduwole          #+#    #+#             */
-/*   Updated: 2022/07/25 15:18:00 by doduwole         ###   ########.fr       */
+/*   Updated: 2022/07/26 12:42:25 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	ft_print_comb2(void)
 			}
 			j++;
 		}
-		ft_putchar(',');
 		i++;
 	}
 }
