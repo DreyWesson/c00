@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_xx.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 14:02:17 by doduwole          #+#    #+#             */
-/*   Updated: 2022/07/26 14:37:29 by doduwole         ###   ########.fr       */
+/*   Created: 2022/07/26 14:01:27 by doduwole          #+#    #+#             */
+/*   Updated: 2022/07/26 14:30:14 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,18 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_comb2(void)
+void	ft_putnbr(int nb)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i <= 98)
+	if (nb < 0)
 	{
-		j = i + 1;
-		while (j <= 99)
-		{
-			ft_putchar(i);
-			ft_putchar((i / 10) + '0');
-			ft_putchar((i % 10) + '0');
-			ft_putchar(' ');
-			ft_putchar((j / 10) + '0');
-			ft_putchar((j % 10) + '0');
-			if ((i != 98))
-			{
-				ft_putchar(',');
-				ft_putchar(' ');
-			}
-			j++;
-		}
-		ft_putchar(',');
-		i++;
+		ft_putchar('-');
+		nb = -nb;
 	}
+	else if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
 }
